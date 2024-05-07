@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Request Page</title>
+	<style>
+		.requests-container {
+			display: flex;
+			flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+
+		}
+
+		.request-box {
+			width: 30%;
+			background-color: #f5f5f5;
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.request-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.request-student {
+			flex: 2;
+		}
+
+		.request-actions {
+			display: flex;
+			flex: 1;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.accept-btn,
+		.deny-btn {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			color: #fff;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.accept-btn {
+			background-color: #4CAF50;
+		}
+
+		.deny-btn {
+			background-color: #f44336;
+		}
+
+		.accept-btn:hover,
+		.deny-btn:hover {
+			transform: scale(1.05);
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		p {
+			margin-bottom: 5px;
+		}
+        .navbar {
+        background-color: #dc7f45;
+        overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            color: rgb(252, 249, 249);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: rgb(217, 108, 30);
+        }
+
+	</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="file.html">Home</a>
+        <a href="request.html">Requests</a>
+        <a href="viewprojects.html">My Projects</a>
+      </div>
+      <div class="requests-container">
+        <div class="request-box">
+          <div class="request-info">
+            <div class="request-student">
+              <h3>Naina verma</h3>
+              <p>Registration Number: 209302112</p>
+              <p>Project Description: speech emotion recognition</p>
+              <p>Section: A</p>
+              <p>Branch: IT</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="deny-btn">Deny</button>
+            </div>
+          </div>
+        </div>
+        <div class="request-box">
+          <div class="request-info">
+            <div class="request-student">
+              <h3>Shreya singh</h3>
+              <p>Registration Number: 20938221</p>
+              <p>Project Description: Weather forecasting</p>
+              <p>Section: A</p>
+              <p>Branch: IT</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="deny-btn">Deny</button>
+            </div>
+          </div>
+        </div>
+        <div class="request-box">
+          <div class="request-info">
+            <div class="request-student">
+              <h3>Mumuksh Srivastava</h3>
+              <p>Registration Number: 209302191</p>
+              <p>Project Description: Minor Project Management System</p>
+              <p>Section: C</p>
+              <p>Branch: IT</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="deny-btn">Deny</button>
+            </div>
+          </div>
+        </div>
+        <div class="request-box">
+          <div class="request-info">
+            <div class="request-student">
+              <h3>Aryahi Srivastava</h3>
+              <p>Registration Number: 209302013</p>
+              <p>Project Description: Minor Project Management System</p>
+              <p>Section: A</p>
+              <p>Branch: IT</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="deny-btn">Deny</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const acceptBtns = document.querySelectorAll('.accept-btn');
+        const denyBtns = document.querySelectorAll('.deny-btn');
+        acceptBtns.forEach((btn) => {
+          btn.addEventListener('click', (event) => {
+            const parentBox = event.target.closest('.request-box');
+            parentBox.style.transition = 'opacity 0.5s ease-in-out';
+            parentBox.style.opacity = 0;
+            setTimeout(() => {
+              parentBox.remove();
+            }, 500);
+           });
+        });
+  
+        denyBtns.forEach((btn) => {
+          btn.addEventListener('click', (event) => {
+            const parentBox = event.target.closest('.request-box');
+            parentBox.style.transition = 'opacity 0.5s ease-in-out';
+            parentBox.style.opacity = 0;
+            setTimeout(() => {
+              parentBox.remove();
+            }, 500);
+         });
+        });         
+      </script>
+    </body>
+  </html>
+    
+
